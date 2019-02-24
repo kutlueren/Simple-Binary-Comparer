@@ -1,8 +1,8 @@
-#Simple Binary Comaparer
+# Simple Binary Comaparer
 
 This project contains solutions to the "Assignment Scalable Web". It consists of mainly 3 projects, one for backend API (SimpleBinaryComparer.API), one for integration test, also an unit test project for backend API.
 
-##Getting Started
+## Getting Started
 
 This solutions are implemented in order to test and achieve the requirements described in the assignment. All the requirements are covered with the solution which includes a REST API and documentation with Swagger, 
 unit and intergration testing with xunit, a simple layered approach for the arthitecture and repository pattern for persistance and a in memory database.
@@ -21,9 +21,9 @@ The techs used in the solution as follows;
 	9. Entity Framework core and in memory database as context
 
 
-##How is it done?
+## How is it done?
 
-###REST API
+### REST API
 
 So the REST API is SimpleBinaryComparer.API and it is implemented using .net core. Tha design of the system lays essentially like following;
 
@@ -137,7 +137,7 @@ So the REST API is SimpleBinaryComparer.API and it is implemented using .net cor
 		2. /v1/diff/{id}/left
 		3. /v1/diff/{id}/right
 
-##Credits
+## Credits
 
 	Aram Koukia 	https://koukia.ca/integration-testing-in-asp-net-core-2-0-51d14ede3968
 					https://docs.microsoft.com/en-us/aspnet/core/test/integration-tests?view=aspnetcore-2.2
