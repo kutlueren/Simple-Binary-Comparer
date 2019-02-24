@@ -120,9 +120,9 @@ So the REST API is SimpleBinaryComparer.API and it is implemented using .net cor
  
  **h. SimpleBinaryComparer.API:** it is the REST API implemented in .net core. There are basically 3 methods than a client can consume. You can find the methods in DiffController. 
 
- **NOTE!!: ** Since the assignment is open for assumption, I have implemented the api, business logic, reqeust and respone objects according to my assumption. Left method saves the array as left array, Right method does the same
+ **NOTE!!: Since the assignment is open for assumption, I have implemented the api, business logic, reqeust and respone objects according to my assumption. Left method saves the array as left array, Right method does the same
  for right array. Only one object gets created and saved to persistance for lett and rigth array per id. If there is already created object, the left and right methods updates the array aocordingly. Get method only compares the
- arrays if the 2 arrays exists in the object. If not, then an exception gets thrown. If there is no ojects in given id then an exception thrown as well. **
+ arrays if the 2 arrays exists in the object. If not, then an exception gets thrown. If there is no ojects in given id then an exception thrown as well.**
  
  1. Get method is used to make comparison between 2 arrays. You have to indicate the comparison type in the request object whether it is going to find diffs in the left array or right array. "1" should be send in order to
  find the diffs in the left array, "2" for the right array.
