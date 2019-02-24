@@ -7,7 +7,7 @@ This project contains solutions to the "Assignment Scalable Web". It consists of
 This solutions are implemented in order to test and achieve the requirements described in the assignment. All the requirements are covered with the solution which includes a REST API and documentation with Swagger, 
 unit and intergration testing with xunit, a simple layered approach for the arthitecture and repository pattern for persistance and a in memory database.
 
-##Tech/framework used
+## Tech/framework used
 The techs used in the solution as follows;
 
 	1. .Net core 2.2
