@@ -125,7 +125,7 @@ So the REST API is SimpleBinaryComparer.API and it is implemented using .net cor
  arrays if the 2 arrays exists in the object. If not, then an exception gets thrown. If there is no ojects in given id then an exception thrown as well.**
  
  1. Get method is used to make comparison between 2 arrays. You have to indicate the comparison type in the request object whether it is going to find diffs in the left array or right array. "1" should be send in order to
- find the diffs in the left array, "2" for the right array.
+ find the diffs in the left array, "2" for the right array. It only returns the offsetts of the diffs and the length of the diff data.
  2. Left method saves or updates the array to left.
  3. Right method saves or updates the array to right.
  
