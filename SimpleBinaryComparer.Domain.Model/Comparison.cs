@@ -26,31 +26,21 @@ namespace SimpleBinaryComparer.Domain.Model
         {
             byte[] diffs = LeftArray.Except(RightArray).ToArray();
 
-            List<DifferenceOffset> offsetList = new List<DifferenceOffset>();
-
-            foreach (var diff in diffs)
-            {
-                offsetList.Add(new DifferenceOffset() { OffSet = Array.FindIndex(LeftArray, row => row == diff) });
-            }
-
-            Difference difference = new Difference();
-
-            difference.OffSets = offsetList;
-            difference.Length = diffs.Length;
-
-            return difference;
+            return GetDifference(diffs, LeftArray);
         }
 
         public Difference FindDiffsInRight()
         {
             byte[] diffs = RightArray.Except(LeftArray).ToArray();
 
+            return GetDifference(diffs, RightArray);
+        }
+
+        private Difference GetDifference(byte[] diffs, byte[] arrayToFindIndex)
+        {
             List<DifferenceOffset> offsetList = new List<DifferenceOffset>();
 
-            foreach (var diff in diffs)
-            {
-                offsetList.Add(new DifferenceOffset() { OffSet = Array.FindIndex(RightArray, row => row == diff) });
-            }
+            offsetList = diffs.Select(t => new DifferenceOffset() { OffSet = Array.FindIndex(arrayToFindIndex, row => row == t) }).ToList();
 
             Difference difference = new Difference();
 

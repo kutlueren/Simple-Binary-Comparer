@@ -1,4 +1,4 @@
-# Simple Binary Comaparer
+# Simple Binary Comparer
 
 This project contains solutions to the "Assignment Scalable Web". It consists of mainly 3 projects, one for backend API (SimpleBinaryComparer.API), one for integration test, also an unit test project for backend API.
 
