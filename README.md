@@ -4,8 +4,8 @@ This project contains solutions to the "Assignment Scalable Web". It consists of
 
 ## Getting Started
 
-This solutions are implemented in order to test and achieve the requirements described in the assignment. All the requirements are covered with the solution which includes a REST API and documentation with Swagger, 
-unit and intergration testing with xunit, a simple layered approach for the arthitecture and repository pattern for persistance and a in memory database.
+These solutions are implemented in order to test and achieve the requirements described in the assignment. All the requirements are covered within the solution which includes a REST API and documentation with Swagger, 
+unit and intergration testing with xunit, a simple layered approach for the arthitecture and a repository pattern for persistance and an in memory database.
 
 ## Tech/framework used
 The techs used in the solution as follows;
@@ -29,7 +29,7 @@ So the REST API is SimpleBinaryComparer.API and it is implemented using .net cor
 
  **a. SimpleBinaryComparer.Bootstrapper :** Used for dependency injection implementation. Consequently, rest of the system is abstracted from the API except SimpleBinaryComparer.Domain.Service.
 
- Microsoft.Extensions.DependencyInjection library used for dependency injection and it has been implemented such as;
+ Microsoft.Extensions.DependencyInjection library used for dependency injection and it has been implemented as following;
 
  		 services.AddDbContext<ApplicationDbContext>(opt => opt.UseInMemoryDatabase("ApplicationDbContext"));
          services.AddTransient<IComparisonService, ComparisonService>();
@@ -118,18 +118,18 @@ So the REST API is SimpleBinaryComparer.API and it is implemented using .net cor
             }
         }
  
- **h. SimpleBinaryComparer.API:** it is the REST API implemented in .net core. There are basically 3 methods than a client can consume. You can find the methods in DiffController. 
+ **h. SimpleBinaryComparer.API:** It is the REST API implemented in .net core. There are basically 3 methods than a client can consume. You can find the methods in DiffController. 
 
  **NOTE!!: Since the assignment is open for assumption, I have implemented the api, business logic, reqeust and respone objects according to my assumption. Left method saves the array as left array, Right method does the same
- for right array. Only one object gets created and saved to persistance for left and rigth array per id. If there is already created object, the left and right methods updates the array aocordingly. Get method only compares the
- arrays if the 2 arrays exists in the object. If not, then an exception gets thrown. If there is no ojects in given id then an exception thrown as well.**
+ for right array. Only one object gets created and saved to persistance for left and rigth array per id. If there is already created object, the left and right methods updates the array accordingly. Get method only compares the
+ arrays if the 2 arrays exists in the object. If not, then an exception gets thrown. If there is no object in given id then an exception thrown as well.**
  
  1. Get method is used to make comparison between 2 arrays. You have to indicate the comparison type in the request object whether it is going to find diffs in the left array or right array. "1" should be send in order to
  find the diffs in the left array, "2" for the right array. It only returns the offsetts of the diffs and the length of the diff data.
  2. Left method saves or updates the array to left.
  3. Right method saves or updates the array to right.
  
- There is a middleware for global exception handling as well(ExceptionMiddleware). It handles the exceptions and returns a proper response the the client.
+ There is a middleware for global exception handling as well(ExceptionMiddleware). It handles the exceptions and returns a proper response to the client.
 
  The api will run on http://localhost:53040 and if you type http://localhost:53040/swagger/index.html you can observe the api methods which are;
  
