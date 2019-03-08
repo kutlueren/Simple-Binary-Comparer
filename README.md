@@ -4,7 +4,7 @@ It consists of mainly 3 projects, one for backend API (SimpleBinaryComparer.API)
 
 ## Getting Started
 
-These solutions are implemented in order to test and achieve the requirements described in the assignment. All the requirements are covered within the solution which includes a REST API and documentation with Swagger, 
+These solutions are implemented in order to test demonstrate a project implemented using .NET Core, unit and integration testing. All the requirements are covered within the solution which includes a REST API and documentation with Swagger, 
 unit and intergration testing with xunit, a simple layered approach for the arthitecture and a repository pattern for persistance and an in memory database.
 
 ## Tech/framework used
