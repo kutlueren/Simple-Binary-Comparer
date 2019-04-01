@@ -1,5 +1,4 @@
 ﻿using SimpleBinaryComparer.Domain.Model;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace SimpleBinaryComparer.Core.Repository

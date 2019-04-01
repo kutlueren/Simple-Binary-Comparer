@@ -1,10 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Newtonsoft.Json;
-using SimpleBinaryComparer.Domain.Service.Exception;
 using SimpleBinaryComparer.Domain.Service.Model;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 

@@ -4,7 +4,6 @@ using SimpleBinaryComparer.Core.Repository;
 using SimpleBinaryComparer.Domain.Model;
 using SimpleBinaryComparer.Domain.Repository.Context;
 using System;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace SimpleBinaryComparer.Domain.Repository.Repository

@@ -9,6 +9,9 @@ using SimpleBinaryComparer.Domain.Service.Interface;
 
 namespace SimpleBinaryComparer.Bootstrapper
 {
+    /// <summary>
+    /// IOC injection manager
+    /// </summary>
     public class Registration
     {
         public void Register(IServiceCollection services)
