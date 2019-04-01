@@ -15,6 +15,12 @@ namespace SimpleBinaryComparer.Domain.Service.Interface
         /// <param name="comparison"></param>
         /// <returns></returns>
         Task InsertOrUpdateAsync(ComparisonInsertRequestDto comparison);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="requestDto"></param>
+        /// <returns></returns>
         Task<ComparisonResponseDto> CompareAsync(ComparisonRequestDto requestDto);
     }
 }
