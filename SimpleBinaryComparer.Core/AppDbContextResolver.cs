@@ -11,6 +11,11 @@ namespace SimpleBinaryComparer.Domain.Repository.Context
             _dbContext = dbContext;
         }
 
+        /// <summary>
+        /// returns current db context
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <returns>T as current context</returns>
         public T GetCurrentDbContext<T>()
         {
             return (T)_dbContext;
