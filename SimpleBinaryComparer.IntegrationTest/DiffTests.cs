@@ -11,6 +11,7 @@ using Xunit;
 
 namespace SimpleBinaryComparer.IntegrationTest
 {
+    [Trait("Category", "IntegrationTest")]
     public class DiffTests
     {
         private HttpClient httpClient = new HttpClient();

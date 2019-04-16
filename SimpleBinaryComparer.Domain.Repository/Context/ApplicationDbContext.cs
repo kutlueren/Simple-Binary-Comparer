@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace SimpleBinaryComparer.Domain.Repository.Context
 {
+    /// <summary>
+    /// Read ApplicationDbContext, depends on EF
+    /// </summary>
     public class ApplicationDbContext : DbContext, IApplicationDbContext
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)

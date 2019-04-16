@@ -1,5 +1,4 @@
-﻿using SimpleBinaryComparer.Domain.Model;
-using SimpleBinaryComparer.Domain.Service.Model;
+﻿using SimpleBinaryComparer.Domain.Service.Model;
 using System.Threading.Tasks;
 
 namespace SimpleBinaryComparer.Domain.Service.Interface
