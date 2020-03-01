@@ -99,7 +99,7 @@ namespace SimpleBinaryComparer.UnitTest
         {
             ComparisonService comparisonService = new ComparisonService(_comparisonRepository.Object, _applicationDbContext.Object);
 
-            BusinessException ex= await Assert.ThrowsAsync<BusinessException>(async () => { await comparisonService.CompareAsync(new ComparisonRequestDto() { Id = 1, ValueType = ComparisonEnum.Left }); });
+            BusinessException ex = await Assert.ThrowsAsync<BusinessException>(async () => { await comparisonService.CompareAsync(new ComparisonRequestDto() { Id = 1, ValueType = ComparisonEnum.Left }); });
 
             ex.Message.Should().Equals("No record found!");
         }
@@ -118,7 +118,6 @@ namespace SimpleBinaryComparer.UnitTest
             ex.Message.Should().Equals("Right array is null!");
         }
 
-
         [Fact]
         public async Task ComparisonService_Left_Comparison_Should_Throw_Exception_Due_To_Null_Left_Value()
         {
@@ -133,7 +132,6 @@ namespace SimpleBinaryComparer.UnitTest
             ex.Message.Should().Equals("Left array is null!");
         }
 
-
         [Theory]
         [InlineData(new byte[3] { 1, 2, 3 }, new byte[4] { 1, 2, 3, 4 }, ComparisonEnum.Left)]
         [InlineData(new byte[3] { 1, 2, 3 }, new byte[4] { 1, 2, 3, 4 }, ComparisonEnum.Right)]
@@ -147,11 +145,11 @@ namespace SimpleBinaryComparer.UnitTest
 
             comparison.Should().NotBeNull();
 
-            ComparisonResponseDto result= await comparisonService.CompareAsync(new ComparisonRequestDto() { Id = id, ValueType = type });
+            ComparisonResponseDto result = await comparisonService.CompareAsync(new ComparisonRequestDto() { Id = id, ValueType = type });
             ComparisonResponseObject resultObject = (ComparisonResponseObject)result.Result;
 
             resultObject.Equal.Should().BeFalse();
-            resultObject.SameSize.Should().BeFalse(); 
+            resultObject.SameSize.Should().BeFalse();
         }
 
         [Theory]

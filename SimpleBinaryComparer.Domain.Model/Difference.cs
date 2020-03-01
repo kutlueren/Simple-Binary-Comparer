@@ -3,7 +3,7 @@
 namespace SimpleBinaryComparer.Domain.Model
 {
     /// <summary>
-    /// Difference object that contains the lenght of the diff and the offsets 
+    /// Difference object that contains the lenght of the diff and the offsets
     /// </summary>
     public class Difference
     {

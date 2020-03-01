@@ -22,7 +22,6 @@ namespace SimpleBinaryComparer.Bootstrapper
             services.AddScoped<IApplicationDbContextResolver, ApplicationDbContextResolver>();
 
             services.AddScoped<IApplicationDbContext>(provider => provider.GetService<ApplicationDbContext>());
-
         }
     }
 }

@@ -16,7 +16,7 @@ namespace SimpleBinaryComparer.Domain.Service.Interface
         Task InsertOrUpdateAsync(ComparisonInsertRequestDto comparison);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="requestDto"></param>
         /// <returns></returns>

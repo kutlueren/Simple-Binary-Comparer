@@ -105,10 +105,8 @@ namespace SimpleBinaryComparer.IntegrationTest
             else
             {
                 servicResponse.Message.Should().Be("Left array is null!");
-
             }
         }
-
 
         [Theory]
         [InlineData(new byte[3] { 1, 2, 3 }, new byte[4] { 1, 2, 3, 4 }, ComparisonEnum.Left, 8)]
@@ -169,7 +167,6 @@ namespace SimpleBinaryComparer.IntegrationTest
         [InlineData(new byte[4] { 7, 1, 2, 5 }, new byte[4] { 1, 2, 4, 8 }, ComparisonEnum.Right, 10)]
         public async Task Comparison_Should_Return_Equal_False(byte[] valueLeft, byte[] valueRight, ComparisonEnum type, int id)
         {
-
             await Should_Save_Left(id, valueLeft);
 
             await Should_Save_Right(id, valueRight);
@@ -205,7 +202,6 @@ namespace SimpleBinaryComparer.IntegrationTest
             }
         }
     }
-
 
     public class RequestModel
     {

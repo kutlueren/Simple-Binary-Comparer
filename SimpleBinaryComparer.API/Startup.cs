@@ -32,7 +32,6 @@ namespace SimpleBinaryComparer.API
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new Info { Title = "Simple Binary Comparer Api", Version = "v1" });
-
             });
         }
 
